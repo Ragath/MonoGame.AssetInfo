@@ -4,6 +4,17 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <PackageTargetFallback>portable-win8+net45+wpa81</PackageTargetFallback>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <PackageLicenseUrl>https://github.com/Ragath/MonoGame.AssetInfo/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Ragath/MonoGame.AssetInfo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Ragath/MonoGame.AssetInfo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>Extends MonoGame by letting the Content Pipeline process *.mgcb files to enable querying information about assets at runtime. **This is the runtime part of the library**</Description>
+    <Authors>Daniel Sör</Authors>
+    <Company />
+    <PackageTags>monogame contentpipeline content pipeline mgcb assetinfo</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

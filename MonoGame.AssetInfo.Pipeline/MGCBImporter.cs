@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework.Content.Pipeline;
+using System;
 
 namespace MonoGame.AssetInfo.Pipeline
 {
@@ -20,6 +21,7 @@ namespace MonoGame.AssetInfo.Pipeline
             const string patternProcessor = "/processor:";
             const string patternProcessorParam = "/processorParam:";
             const string patternBuild = "/build:";
+            const string patternCopy = "/copy:";
 
 
             AssetInfoContent asset = null;
@@ -38,13 +40,20 @@ namespace MonoGame.AssetInfo.Pipeline
                     asset.Importer = line.Substring(patternImporter.Length);
                 else if (line.StartsWith(patternProcessor))
                     asset.Processor = line.Substring(patternProcessor.Length);
-                else if (line.StartsWith(patternBuild))
-                    asset.OutputPath = Path.ChangeExtension(line.Substring(patternBuild.Length), null);
                 else if (line.StartsWith(patternProcessorParam))
                 {
                     var parts = line.Substring(patternProcessorParam.Length).Split(new[] { '=' }, 2);
-
                     ((Dictionary<string, string>)asset.ProcessorParameters)[parts[0]] = parts[1];
+                }
+                else if (line.StartsWith(patternBuild))
+                    asset.OutputPath = Path.ChangeExtension(line.Substring(patternBuild.Length), null);
+                else if (line.StartsWith(patternCopy))
+                {
+                    asset.OutputPath = line.Substring(patternCopy.Length);
+                    if (".xnb".Equals(Path.GetExtension(asset.OutputPath), StringComparison.InvariantCultureIgnoreCase))
+                        asset.OutputPath = Path.ChangeExtension(asset.OutputPath, null);
+                    else
+                        asset.IsXNB = false;
                 }
 
             if (asset != null)

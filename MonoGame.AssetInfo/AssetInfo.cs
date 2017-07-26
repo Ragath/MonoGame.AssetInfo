@@ -11,5 +11,7 @@ namespace MonoGame.AssetInfo
         public string Processor { get; private set; }
 
         public IReadOnlyDictionary<string, string> ProcessorParameters { get; private set; }
+
+        public bool IsXNB { get; private set; }
     }
 }

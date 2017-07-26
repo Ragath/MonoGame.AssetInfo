@@ -11,7 +11,9 @@ namespace MonoGame.AssetInfo.Pipeline
 
         public string Importer { get; set; }
         public string Processor { get; set; }
-        
+
         public IReadOnlyDictionary<string, string> ProcessorParameters { get; set; } = new Dictionary<string, string>();
+
+        public bool IsXNB { get; set; } = true;
     }
 }

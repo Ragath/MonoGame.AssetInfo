@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.AssetInfo.Pipeline
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.AssetInfo", "MonoGame.AssetInfo\MonoGame.AssetInfo.csproj", "{202A9FC6-54AC-49C9-AEE6-AD8DBEB53539}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.AssetInfo.Sample", "MonoGame.AssetInfo.Sample\MonoGame.AssetInfo.Sample.csproj", "{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{512CC1D4-AA79-4803-9C4D-3CF6872AA2D9} = {512CC1D4-AA79-4803-9C4D-3CF6872AA2D9}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{202A9FC6-54AC-49C9-AEE6-AD8DBEB53539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{202A9FC6-54AC-49C9-AEE6-AD8DBEB53539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{202A9FC6-54AC-49C9-AEE6-AD8DBEB53539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,9 +4,12 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <PackageTargetFallback>portable-win8+net45+wpa81</PackageTargetFallback>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
     <PackageLicenseUrl>https://github.com/Ragath/MonoGame.AssetInfo/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Ragath/MonoGame.AssetInfo</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Ragath/MonoGame.AssetInfo</RepositoryUrl>
@@ -17,8 +20,16 @@
     <PackageTags>monogame contentpipeline content pipeline mgcb assetinfo</PackageTags>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!--Fixes Xamarin.Android issues-->
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>True</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="MonoGame.Framework.Portable" Version="3.6.0.1625">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.AssetInfo.Pipeline", "MonoGame.AssetInfo.Pipeline\MonoGame.AssetInfo.Pipeline.csproj", "{512CC1D4-AA79-4803-9C4D-3CF6872AA2D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.AssetInfo", "MonoGame.AssetInfo\MonoGame.AssetInfo.csproj", "{202A9FC6-54AC-49C9-AEE6-AD8DBEB53539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.AssetInfo.Sample", "MonoGame.AssetInfo.Sample\MonoGame.AssetInfo.Sample.csproj", "{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.AssetInfo.Sample", "MonoGame.AssetInfo.Sample\MonoGame.AssetInfo.Sample.csproj", "{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{512CC1D4-AA79-4803-9C4D-3CF6872AA2D9} = {512CC1D4-AA79-4803-9C4D-3CF6872AA2D9}
 	EndProjectSection
@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content", "Content\Content.csproj", "{4420F8D4-8F0E-4B78-BED4-29C392764ADA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,8 +37,15 @@ Global
 		{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{679EC54C-116B-4CBC-ABB7-FB0C40001AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4420F8D4-8F0E-4B78-BED4-29C392764ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4420F8D4-8F0E-4B78-BED4-29C392764ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4420F8D4-8F0E-4B78-BED4-29C392764ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4420F8D4-8F0E-4B78-BED4-29C392764ADA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D83FAE6B-C2FD-4E7C-8D86-8300B1F50614}
 	EndGlobalSection
 EndGlobal

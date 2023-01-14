@@ -1,23 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net462</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <PackageLicenseUrl>https://github.com/Ragath/MonoGame.AssetInfo/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/Ragath/MonoGame.AssetInfo</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Ragath/MonoGame.AssetInfo</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <Description>Extends MonoGame by letting the Content Pipeline process *.mgcb files to enable querying information about assets at runtime. **This is contains the Content Pipeline extensions**</Description>
-    <Authors>Daniel Sör</Authors>
-    <Company />
-    <PackageTags>monogame contentpipeline content pipeline mgcb assetinfo</PackageTags>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.6.0.1625" />
-  </ItemGroup>
+	<PropertyGroup>
+		<Description>Extends MonoGame by letting the Content Pipeline process *.mgcb files to enable querying information about assets at runtime. **This is contains the Content Pipeline extensions**</Description>
+		<Authors>Daniel Sör</Authors>
+		<PackageTags>monogame contentpipeline content pipeline mgcb assetinfo</PackageTags>
+		<PackageTags>Spritesheet MonoGame Content Pipeline Tile Sprite Sheet</PackageTags>
+		<PackageProjectUrl>https://github.com/Ragath/MonoGame.AssetInfo</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Ragath/MonoGame.AssetInfo</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="7.0.0" />
+		<PackageReference Include="MonoGame.Framework.Content.Pipeline" Version="3.8.1.303">
+			<PrivateAssets>All</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
+			<PrivateAssets>All</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
 
 </Project>

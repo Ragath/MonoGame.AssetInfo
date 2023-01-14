@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using System;
+using Microsoft.Extensions.FileSystemGlobbing;
 
 namespace MonoGame.AssetInfo.Pipeline
 {
-    [ContentImporter(".mgcb", DisplayName = "MGCB Importer", DefaultProcessor = "PassThroughProcessor")]
+    [ContentImporter(".info", DisplayName = "MGCB Importer", DefaultProcessor = "PassThroughProcessor")]
     public class MGCBImporter : ContentImporter<AssetInfoContent[]>
     {
         public override AssetInfoContent[] Import(string filename, ContentImporterContext context)
         {
-            return ParseMGCB(File.ReadLines(filename)).ToArray();
+            var matcher = new Matcher(StringComparison.InvariantCultureIgnoreCase);
+            matcher.AddIncludePatterns(File.ReadLines(filename));
+
+            return matcher
+                .GetResultsInFullPath(Path.GetDirectoryName(filename))
+                .SelectMany(file => ParseMGCB(File.ReadLines(file)))
+                .ToArray();
+            //return ParseMGCB(File.ReadLines(filename)).ToArray();
         }
 
         static IEnumerable<AssetInfoContent> ParseMGCB(IEnumerable<string> lines)

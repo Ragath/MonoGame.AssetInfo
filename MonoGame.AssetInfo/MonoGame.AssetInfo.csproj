@@ -1,38 +1,30 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
-    <PackageTargetFallback>portable-win8+net45+wpa81</PackageTargetFallback>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-  </PropertyGroup>
-  
-  <PropertyGroup>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <PackageLicenseUrl>https://github.com/Ragath/MonoGame.AssetInfo/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/Ragath/MonoGame.AssetInfo</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Ragath/MonoGame.AssetInfo</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <Description>Extends MonoGame by letting the Content Pipeline process *.mgcb files to enable querying information about assets at runtime. **This is the runtime part of the library**</Description>
-    <Authors>Daniel Sör</Authors>
-    <Company />
-    <PackageTags>monogame contentpipeline content pipeline mgcb assetinfo</PackageTags>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net6.0</TargetFrameworks>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <!--Fixes Xamarin.Android issues-->
-    <DebugType>pdbonly</DebugType>
-    <DebugSymbols>True</DebugSymbols>
-  </PropertyGroup>
+	<PropertyGroup>
+		<Description>Extends MonoGame by letting the Content Pipeline process *.mgcb files to enable querying information about assets at runtime. **This is the runtime part of the library**</Description>
+		<Authors>Daniel Sör</Authors>
+		<PackageTags>monogame contentpipeline content pipeline mgcb assetinfo</PackageTags>
+		<PackageTags>Spritesheet MonoGame Content Pipeline Tile Sprite Sheet</PackageTags>
+		<PackageProjectUrl>https://github.com/Ragath/MonoGame.AssetInfo</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Ragath/MonoGame.AssetInfo</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1">
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="MonoGame.Framework.Portable" Version="3.6.0.1625">
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
+			<PrivateAssets>All</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
 
 </Project>

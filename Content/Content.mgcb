@@ -16,7 +16,7 @@
 
 #begin Content.info
 /importer:MGCBImporter
-/processor:PassThroughProcessor
+/processor:MGCBProcessor
 /build:Content.info
 
 #begin element_blue_polygon.png
